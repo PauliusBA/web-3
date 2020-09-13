@@ -1,21 +1,19 @@
-
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
-    .navbar-brand.abs
-        {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            text-align: center;
-        }
-    }
+  .navbar-brand.abs {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+}
 
-    /*
+/*
 .navbar {
     color: black;
 }
@@ -48,153 +46,156 @@
     z-index: 10;
   } */
 
-  /* RESET RULES & HELPER CLASSES
+/* RESET RULES & HELPER CLASSES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
-    --lightblue: #f6f9fc;
-    --red: #0083d2;
-  }
-  
-  a,
-  a:hover {
-    color: inherit;
-  }
-  
-  a:hover {
-    text-decoration: none;
-  }
-  
-  .bg-lightblue {
-    background: var(--lightblue);
-  }
-  
-  .bg-red {
-    background: var(--red);
-  }
-  
-  .text-red {
-    color: var(--red);
-  }
-  
-  .container-fluid-max {
-    max-width: 1440px;
-  }
-  
-  .cover {
-    background: no-repeat center/cover;
-  }
-  
-  .p-15 {
-    padding: 15px;
-  }
-  
-  /* SCROLL ANIMATIONS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .scroll .page-header {
-    background: var(--red);
-  }
-  
-  .scroll .hero {
-    transform: scale(0.95);
-  }
+  --lightblue: #f6f9fc;
+  --red: #0083d2;
+}
 
-  .scroll .navbar-brand {
-    transform: scale(1.2);
-    transition: 0.5s ease-in-out;
-  }
+a,
+a:hover {
+  color: inherit;
+}
 
-  .scroll .navbar .nav-item {
-    transition: scale(0.9);
-    transition: 0.5s ease-in-out;
-  }
-  
-  /* HEADER
+a:hover {
+  text-decoration: none;
+}
+
+.bg-lightblue {
+  background: var(--lightblue);
+}
+
+.bg-red {
+  background: var(--red);
+}
+
+.text-red {
+  color: var(--red);
+}
+
+.container-fluid-max {
+  max-width: 1440px;
+}
+
+.cover {
+  background: no-repeat center/cover;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+/* SCROLL ANIMATIONS
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.scroll .page-header {
+  background: var(--red);
+}
+
+.scroll .hero {
+  transform: scale(0.95);
+}
+
+.scroll .navbar-brand {
+  transform: scale(1.2);
+  transition: 0.5s ease-in-out;
+}
+
+.scroll .navbar .nav-item {
+  transition: scale(0.9);
+  transition: 0.5s ease-in-out;
+}
+
+/* HEADER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header {
+  transition: background 0.5s ease-in-out;
+}
+
+.page-header .navbar {
+  padding: 1rem 0;
+}
+
+.page-header .navbar-toggler {
+  /* the variable is inherited from BS4 built-in variables */
+  border-color: var(--white);
+}
+
+.nav-item:hover {
+  color: blue;
+}
+
+/* BANNER SECTION
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hero {
+  background-attachment: fixed;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.hero .container-fluid {
+  z-index: 10;
+}
+
+.hero-cta {
+  margin: 0 auto;
+}
+
+/* POPULAR DESTINATIONS SECTION
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.popular-destinations figure {
+  margin-bottom: 30px;
+}
+
+.popular-destinations figcaption {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.popular-destinations img {
+  filter: grayscale(100%) blur(3px);
+  transition: transform 0.5s, filter 0.75s;
+}
+
+.popular-destinations a:hover img {
+  transform: scale(1.25);
+  filter: none;
+}
+
+/* PAGE FOOTER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer .footer-links {
+  text-align: right;
+}
+
+/* MEDIA QUERIES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* MEDIUM SCREENS */
+@media screen and (max-width: 991px) {
   .page-header {
-    transition: background 0.5s ease-in-out;
+    background: var(--red);
   }
-  
-  .page-header .navbar {
-    padding: 1rem 0;
-  }
-  
-  .page-header .navbar-toggler {
-    /* the variable is inherited from BS4 built-in variables */
-    border-color: var(--white); 
-  }
+}
 
-  .nav-item:hover {
-    color: blue;
-
+/* SMALL SCREENS */
+@media screen and (max-width: 767px) {
+  .page-footer .footer-child {
+    text-align: center;
   }
-  
-  /* BANNER SECTION
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .hero {
-    background-attachment: fixed;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.5) 0,
-      rgba(0, 0, 0, 0.3) 50%,
-      rgba(0, 0, 0, 0.1) 100%
-    );
-  }
-  
-  .hero .container-fluid {
-    z-index: 10;
-  }
-  
-  /* POPULAR DESTINATIONS SECTION
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .popular-destinations figure {
-    margin-bottom: 30px;
-  }
-  
-  .popular-destinations figcaption {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.3);
-  }
-  
-  .popular-destinations img {
-    filter: grayscale(100%) blur(3px);
-    transition: transform 0.5s, filter 0.75s;
-  }
-  
-  .popular-destinations a:hover img {
-    transform: scale(1.25);
-    filter: none;
-  }
-  
-  /* PAGE FOOTER
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .page-footer .footer-links {
-    text-align: right;
-  }
-  
-  /* MEDIA QUERIES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  /* MEDIUM SCREENS */
-  @media screen and (max-width: 991px) {
-    .page-header {
-      background: var(--red);
-    }
-  }
-  
-  /* SMALL SCREENS */
-  @media screen and (max-width: 767px) {
-    .page-footer .footer-child {
-      text-align: center;
-    }
-  }
+}
